@@ -88,7 +88,7 @@ body {
 
 .nav li{
   font-weight: 400;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .nav li.name{
@@ -117,8 +117,8 @@ body {
 }
 
 .hero p{
-  font-size: 20px;
-  margin-top: 13%;  
+  font-size: 18px;
+  margin-top: 10%;  
   padding-left: 8%;
   line-height: 170%;
 }
@@ -134,17 +134,18 @@ body {
 
 .about-inner {
   max-width: 1400px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 120px;
+  gap: 110px;
 }
 
 
 .profile-img {
-  width: 614px;
-  height: 768px;
+  width: 514px;
+  height: 668px;
   background: url('img/aboutme/profile.jpg') no-repeat center/cover;
   text-indent: -9999px;
 }
@@ -156,13 +157,13 @@ body {
 }
 
 .profile-text h2{
-font-size: 50px;
+font-size: 40px;
 margin-bottom: 100px;
 margin-left: 100px;
 }
 
 .profile-text p{
-font-size: 25px;
+font-size: 20px;
 line-height: 200%;
 font-weight: 400;
 margin-bottom: 40px;
@@ -189,10 +190,14 @@ color: rgb(0, 201, 201);
   justify-content: center;
 }
 .skill h2{
+  position: relative;
+  left: 5%;
   font-weight: 500;
 }
 .skill-wrap {
   display: flex;
+  position: relative;
+  left: 5%;
   gap: 40px;
   margin-top: 40px;
 }
@@ -201,20 +206,27 @@ color: rgb(0, 201, 201);
   flex: 1;
 }
 .skill-box h3{
-  font-size: 32px;
+  font-size: 25px;
   padding-bottom: 32px;
 }
 .skill-box p{
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom:10px;
 }
 
 .skill-icons {
   display: flex;
-  gap: 60px;
+  justify-content: center;   /* ⭐ 중앙 정렬 */
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
   margin-top: 80px;
 }
 
+.skill {
+  padding: 100px 0;
+
+}
 
 
 
@@ -224,12 +236,6 @@ color: rgb(0, 201, 201);
    SKILL ICON ANIMATION
    ========================= */
 
-.skill-icons {
-  display: flex;
-  gap: 60px;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
 .skill-item {
   transform: translateY(60px);
@@ -257,13 +263,7 @@ color: rgb(0, 201, 201);
    SKILL ICON ALIGN FIX
    ========================= */
 
-.skill-icons {
-  display: flex;
-  gap: 50px;
-  justify-content: flex-start;  /* 왼쪽 정렬 */
-  flex-wrap: nowrap;
-  margin-top: 60px;
-}
+
 
 
 
@@ -273,8 +273,8 @@ color: rgb(0, 201, 201);
 
 
 .skill-item {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
 }
 
@@ -298,16 +298,6 @@ color: rgb(0, 201, 201);
 }
 
 
-.skill-icons {
-  display: flex;
-  justify-content: space-between;  /* 핵심 */
-  align-items: center;
-  margin-top: 100px;
-}
-
-.skill-icons {
-  padding-right: 20px;
-}
 
 
 
@@ -360,18 +350,20 @@ color: rgb(0, 201, 201);
 
 /* PROJECT */
 .project {
-  padding: 50px 10%;
+  padding: 50px ;
 }
 
 .project h2{
   text-align: center;
   margin-top: 180px;
-  font-size: 40px;
+  font-size: 35px;
   padding-bottom: 30px;
 }
 
 
 .project-list1 {
+
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -397,7 +389,6 @@ color: rgb(0, 201, 201);
 
 .project-item .thumb {
   width: 100%;
-  height: 400px;
   background: #eee;
   /* border: 1px solid #000; */
   border-radius: 20px;
@@ -434,7 +425,7 @@ color: rgb(0, 201, 201);
 }
 
 .project-item h3{
-  font-size: 36px;
+  font-size: 26px;
   padding: 33px 33px 0px;
 }
 .project-item p{
@@ -442,7 +433,7 @@ color: rgb(0, 201, 201);
   padding-bottom: 33px;
   padding-top: 5px;
   border-radius: 10px;
-  font-size: 23px;
+  font-size: 14px;
   
 }
 
@@ -481,7 +472,7 @@ color: rgb(0, 201, 201);
 
 /* WORK */
 .work {
-  padding: 120px 10%;
+  padding: 120px 0px;
 }
 
 .work-slider {
@@ -884,13 +875,6 @@ footer .number{
 
 
 
-
-
-
-
-
-
-
 /* =========================
    GLOBAL WIDTH FIX
    ========================= */
@@ -900,7 +884,7 @@ body {
 }
 
 section {
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
