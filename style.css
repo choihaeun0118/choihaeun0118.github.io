@@ -58,8 +58,9 @@ body {
 }
 
 .nav {
+  display: flex;
   justify-content: space-between;
-  width: 120%;
+  width: 100%;
 }
 
 .left {
@@ -73,10 +74,9 @@ body {
   display: flex;
 }
 
-.left{
-margin-right: 910px;
-font-size: 20px;
-
+.left {
+  margin-right: 0;
+  font-size: 20px;
 }
 
 .nav ul {
@@ -133,11 +133,12 @@ font-size: 20px;
 }
 
 .about-inner {
-  width: 1540px;
+  max-width: 1400px;
+  width: 90%;
   margin: 0 auto;
   display: flex;
-  align-items: center;  /* 세로 가운데 정렬 */
-  gap: 120px;           /* 이미지와 텍스트 간격 */
+  align-items: center;
+  gap: 120px;
 }
 
 
@@ -870,7 +871,41 @@ footer .number{
     transform 0.3s ease,
     font-weight 0.3s ease;
 }
-/*------수정----  */
+
+/* hover */
+.nav a:hover {
+  color: rgb(0, 201, 201);
+  font-weight: 500;
+  transform: scale(1.08);
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   GLOBAL WIDTH FIX
+   ========================= */
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* HERO는 풀배경 유지 */
+.hero {
+  width: 100%;
+  max-width: 100%;
+}
