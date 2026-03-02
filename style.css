@@ -871,25 +871,6 @@ footer .number{
     font-weight 0.3s ease;
 }
 /*------수정----  */
-/* hover */
-.nav a:hover {
-  color: rgb(0, 201, 201);
-  font-weight: 500;
-  transform: scale(1.08);
-}
-
-.container {
-  width: 100%;
-  max-width: 1400px; /* 1200 → 1400~1600 추천 */
-  margin: 0 auto;
-  padding: 0 40px;   /* 양옆 여백은 패딩으로 */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 
 
