@@ -1,0 +1,881 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  color: #222;
+  line-height: 1.6;
+  
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* background: #fff; */
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;  /* 네비를 통째로 오른쪽으로 */
+  padding: 2% 5%;
+  z-index: 100;
+}
+
+.header {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+/* 스크롤 후 활성화 상태 */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+#project {
+  scroll-margin-top: 120px;
+}
+
+
+/* =========================
+   HEADER TEXT LINE FIX
+   ========================= */
+
+.left {
+  white-space: nowrap; /* 줄바꿈 방지 */
+
+}
+
+.nav {
+  justify-content: space-between;
+  width: 120%;
+}
+
+.left {
+  margin-right: 0 !important; /* 기존 910px 무력화 */
+}
+
+
+
+
+.nav{
+  display: flex;
+}
+
+.left{
+margin-right: 910px;
+font-size: 20px;
+
+}
+
+.nav ul {
+  display: flex;
+  gap: 100px;
+  list-style: none;
+  padding: 16px 0;
+}
+
+.nav li{
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.nav li.name{
+  font-weight: 800;
+}
+
+
+.nav a {
+  color: inherit;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  background: url('img/main/표지.png')no-repeat center/cover;
+  width: 100%;
+  height: 1080px;
+}
+.hero h1{
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  padding-bottom: 100px;
+  font-size: 100px;
+}
+
+.hero p{
+  font-size: 20px;
+  margin-top: 13%;  
+  padding-left: 8%;
+  line-height: 170%;
+}
+
+
+
+
+
+/* ABOUT */
+.about {
+  padding: 100px 0; 
+}
+
+.about-inner {
+  width: 1540px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;  /* 세로 가운데 정렬 */
+  gap: 120px;           /* 이미지와 텍스트 간격 */
+}
+
+
+.profile-img {
+  width: 614px;
+  height: 768px;
+  background: url('img/aboutme/profile.jpg') no-repeat center/cover;
+  text-indent: -9999px;
+}
+
+.profile-text {
+  flex: 1;          /* 남은 공간 다 사용 */
+  padding: 0;
+  margin-top: 100px;       /* 20% 제거 */
+}
+
+.profile-text h2{
+font-size: 50px;
+margin-bottom: 100px;
+margin-left: 100px;
+}
+
+.profile-text p{
+font-size: 25px;
+line-height: 200%;
+font-weight: 400;
+margin-bottom: 40px;
+margin-top: 18px;
+}
+
+.profile-text span{
+color: rgb(0, 201, 201);
+}
+
+
+
+.profile-text .tel{
+  font-size: 23px;
+
+}
+
+
+
+
+/* SKILL */
+.skill {
+  padding: 0px 10%;
+  justify-content: center;
+}
+.skill h2{
+  font-weight: 500;
+}
+.skill-wrap {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.skill-box {
+  flex: 1;
+}
+.skill-box h3{
+  font-size: 32px;
+  padding-bottom: 32px;
+}
+.skill-box p{
+  font-size: 22px;
+  margin-bottom:10px;
+}
+
+.skill-icons {
+  display: flex;
+  gap: 60px;
+  margin-top: 80px;
+}
+
+
+
+
+
+
+/* =========================
+   SKILL ICON ANIMATION
+   ========================= */
+
+.skill-icons {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  transform: translateY(60px);
+  opacity: 0;
+  transition: 
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease,
+    transform 0.3s ease;
+}
+
+/* 등장 상태 */
+.skill-item.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 호버 귀엽게 */
+.skill-item:hover {
+  transform: translateY(-5px) scale(1.08);
+}
+
+
+
+/* =========================
+   SKILL ICON ALIGN FIX
+   ========================= */
+
+.skill-icons {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;  /* 왼쪽 정렬 */
+  flex-wrap: nowrap;
+  margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+.skill-item {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+/* 둥실 애니메이션 */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* show 상태에서만 둥실 */
+.skill-item.show {
+  transform: translateY(0);
+  opacity: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.skill-item:hover {
+  animation-play-state: paused;   /* 둥실 멈춤 */
+  transform: translateY(-8px) scale(1.1);
+}
+
+
+.skill-icons {
+  display: flex;
+  justify-content: space-between;  /* 핵심 */
+  align-items: center;
+  margin-top: 100px;
+}
+
+.skill-icons {
+  padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 수정   */
+
+/* 기본 상태 */
+.skill-item {
+  transform: translateY(60px);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.6s ease;
+}
+
+/* 등장 후 */
+.skill-item.show {
+  transform: translateY(0);
+  opacity: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 둥실 애니메이션 */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* hover 효과 */
+.skill-item:hover {
+  transform: scale(1.08);
+  transition: 0.3s ease;
+  animation-play-state: paused;
+}
+
+
+
+
+
+
+
+/* PROJECT */
+.project {
+  padding: 50px 10%;
+}
+
+.project h2{
+  text-align: center;
+  margin-top: 180px;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+
+
+.project-list1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.project-list {
+  display: grid;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+
+
+
+.project-item a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+.project-item .thumb {
+  width: 100%;
+  height: 400px;
+  background: #eee;
+  /* border: 1px solid #000; */
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+.project-item .tb1{
+  width: 100%;
+  height: 500px;
+  background: #eee;
+  /* border: 1px solid #000; */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+
+
+.project-item .thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.sub-title{
+  text-align: center;
+  font-size: 20px;
+}
+.project-item a{
+  color: inherit;
+}
+
+.project-item h3{
+  font-size: 36px;
+  padding: 33px 33px 0px;
+}
+.project-item p{
+  padding-left: 36px;
+  padding-bottom: 33px;
+  padding-top: 5px;
+  border-radius: 10px;
+  font-size: 23px;
+  
+}
+
+
+.project-item {
+  border: none; /* 기존 선 제거 */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+
+.project-item {
+  border: none;
+  border-radius: 20px; /* 혹시 없다면 추가 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+
+
+
+.project-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+/* WORK */
+.work {
+  padding: 120px 10%;
+}
+
+.work-slider {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.slide {
+  width: 100%;
+  height: 430px;
+  background: #eee;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work P{
+  text-align: center;
+  margin-top: 80px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+
+
+/* 지피티 */
+
+/* 슬라이드 클릭 커서 */
+.slide {
+  cursor: pointer;
+}
+
+/* 모달 배경 */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  text-align: center;
+}
+
+/* 모달 내용 */
+
+.modal-content {
+  background: #fff;
+  width: 800px;
+  max-height: 90vh;   /* 👈 화면 높이 기준 */
+  overflow-y: auto;   /* 👈 내부 스크롤 */
+  padding: 40px;
+  position: relative;
+}
+
+
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+
+
+/* 여기서부터 @@@@@수정 */
+.modal-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+.modal-content p {
+  margin-bottom: 10px;
+}
+
+.modal-content .plus {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+/* 닫기 버튼 */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* =========================
+   WORK 무한 슬라이드 추가코드
+   ========================= */
+
+
+
+.work-slider {
+  overflow: hidden;
+}
+
+.work-slider-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.slide {
+  flex: 0 0 calc((100% - 48px) / 3); /* 3개 보이게 */
+}
+
+
+/* =========================
+   WORK SLIDER HOVER EFFECT
+   ========================= */
+
+.slide {
+  transition: transform 0.4s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+
+
+
+
+
+
+/* =========================
+   SLIDER BUTTON FIX
+   ========================= */
+
+.work-slider {
+  position: relative;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+  font-size: 26px;
+  z-index: 20;
+  transition: 0.3s ease;
+}
+
+/* 안쪽으로 배치 */
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+.work-slider-track {
+  transition: transform 0.6s ease;
+}
+
+
+
+
+
+/* 슬라이더 패딩 추가 */
+.work-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 0 50px;   /* 👈 버튼 공간 확보 */
+}
+
+/* 버튼 위치 바깥으로 */
+.slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+
+
+/* CONTACT */
+.contact {
+  padding: 150px 10%;
+  border-top: 1px solid #eee;
+  text-align: center;
+  position: relative;
+}
+
+.contact h2{
+  font-size: 35px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.contact p {
+    padding-bottom: 10px;
+    font-weight: 800;
+    font-size: 80px;
+}
+
+
+.contact .comment {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.contact .end{
+  position: absolute;
+  font-size: 20px;
+  font-weight: 400;
+  bottom: 5px;
+  color: #414141;
+}
+
+
+.contact span{
+  color: rgb(0, 201, 201);
+}
+
+
+footer .number{
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 40px;
+
+}
+
+
+
+/* =========================
+   CONTACT SCROLL EFFECT
+   ========================= */
+
+.contact h2,
+.contact p,
+.contact .number,
+.contact .comment,
+.contact .end {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 등장 상태 */
+.contact.show h2,
+.contact.show p,
+.contact.show .number,
+.contact.show .comment,
+.contact.show .end {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* =========================
+   TOP BUTTON
+   ========================= */
+
+.top-btn {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 70px;      /* 100px 너무 커보여서 살짝 줄임 */
+  height: 70px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+.top-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 보일 때 */
+.top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 살짝 부드럽게 */
+.top-btn:hover {
+  transform: translateY(-5px);
+}
+
+/* ----------------인터렉션--------------------- */
+
+/* =========================
+   HERO INTRO ANIMATION
+   ========================= */
+
+.hero h1,
+.hero p {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 등장 상태 */
+.hero.show h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero.show p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s; /* 살짝 늦게 */
+}
+
+
+
+
+/* =========================
+   ABOUT SCROLL ANIMATION
+   ========================= */
+
+.profile-img,
+.profile-text h2,
+.profile-text p {
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 이미지 왼쪽 → 살짝 올라오며 등장 */
+.profile-img {
+  transform: translateY(60px);
+}
+
+/* 텍스트 오른쪽 → 왼쪽으로 밀려오듯 */
+.profile-text h2,
+.profile-text p {
+  transform: translateX(60px);
+}
+
+/* 등장 상태 */
+.about.show .profile-img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about.show .profile-text h2,
+.about.show .profile-text p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+/* =========================
+   HEADER HOVER EFFECT (SOFT SCALE)
+   ========================= */
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease,
+    font-weight 0.3s ease;
+}
+
+/* hover */
+.nav a:hover {
+  color: rgb(0, 201, 201);
+  font-weight: 500;
+  transform: scale(1.08);
+}
+
+
