@@ -903,3 +903,245 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   TABLET 768px
+   ========================= */
+
+@media (max-width:768px){
+
+/* HEADER */
+
+.nav ul{
+  gap:40px;
+  font-size:16px;
+}
+
+.left{
+  font-size:16px;
+}
+
+
+/* HERO */
+
+.hero{
+  height:100vh
+}
+
+.hero h1{
+  margin-top: 100px;
+  font-size:60px;
+}
+
+.hero p{
+  display: none;
+  font-size:16px;
+  width:80%;
+}
+
+
+/* ABOUT */
+
+.about-inner{
+  flex-direction:column;
+  gap:40px;
+  text-align:center;
+}
+
+.profile-img{
+  width:320px;
+  height:420px;
+}
+
+.profile-text{
+  margin-top:0;
+}
+
+.profile-text h2{
+  margin-left:0;
+}
+
+
+/* SKILL */
+
+
+
+.skill-icons{
+  gap:30px;
+}
+
+
+/* PROJECT */
+
+.project-list1{
+  grid-template-columns:1fr;
+}
+
+.project-item h3{
+  font-size:22px;
+}
+
+.project-item p{
+  font-size:14px;
+}
+
+
+/* OTHER WORK */
+
+.slide{
+  flex:0 0 calc((100% - 24px) / 2);
+  height:300px;
+}
+
+
+/* CONTACT */
+
+.contact p{
+  font-size:40px;
+}
+
+.number{
+  font-size:24px;
+}
+
+}
+
+
+
+/* =========================
+   MOBILE 480px
+   ========================= */
+
+@media (max-width:480px){
+
+/* HEADER */
+
+.header{
+  padding:20px;
+}
+
+
+.hero p{
+display:none;
+}
+
+
+.nav{
+  flex-direction:column;
+  gap:10px;
+}
+
+.nav ul{
+  gap:20px;
+  justify-content:center;
+}
+
+
+/* HERO */
+
+.hero{
+  height:600px;
+}
+
+.hero h1{
+  font-size:42px;
+}
+
+.hero p{
+  font-size:14px;
+}
+
+
+/* ABOUT */
+
+.profile-img{
+  width:240px;
+  height:320px;
+}
+
+.profile-text h2{
+  font-size:26px;
+}
+
+.profile-text p{
+  font-size:16px;
+}
+
+
+/* SKILL */
+
+.skill h2{
+  left:50%;
+  text-align:center;
+}
+
+.skill-wrap{
+  text-align:center;
+}
+
+.skill-item{
+  width:60px;
+  height:60px;
+}
+.skill{
+  padding: 0px;
+}
+
+/* PROJECT */
+
+.project h2{
+  font-size:26px;
+}
+
+.project-item h3{
+  font-size:18px;
+}
+
+.project-item p{
+  font-size:13px;
+}
+
+
+/* OTHER WORK */
+
+.work h2{
+  left: 5%;
+}
+
+.slide{
+  flex:0 0 100%;
+  height:260px;
+}
+
+.slider-btn{
+  width:40px;
+  height:40px;
+  font-size:20px;
+}
+
+
+/* CONTACT */
+
+.contact p{
+  font-size:28px;
+}
+
+.number{
+  font-size:20px;
+}
+
+.comment{
+  font-size:14px;
+}
+
+}
+
